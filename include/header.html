@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ <title>포트폴리오</title>
+ <link rel="stylesheet" href="../css/style.css">
+ <script src="../js/jquery.min.js"></script>
+ <script src="../js/modernizr-custom.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/masonry.pkgd.min.js"></script>
+ <script>  
+        $(document).ready(function(){
+            var $grid = $('.grid').masonry({
+                itemSelector: '.grid-item',
+                isFitWidth: true,
+                columnWidth: 1
+            });
+            $grid.imagesLoaded().progress( function() {
+              $grid.masonry('layout');
+            });            
+            $('.tm-current-year').text(new Date().getFullYear());        
+        });
+
+ </script>
+ </head>
+ <body>
+ <div id="wrap">
+   <header id="header">
+     <div class="full_container">
+       <div class="inner_container clearfix">
+         <h1 class="logo"><a href="#home">LHJ</a></h1>
+         <div class="m_gnb"> <i class="first"></i> <i class="second"></i> <i class="third"></i> </div>
+         <nav class="gnb_wrap"> <a href="../index.html" class="back">back</a> </nav>
+       </div>
+     </div>
+   </header>
